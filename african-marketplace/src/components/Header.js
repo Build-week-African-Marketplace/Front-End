@@ -2,26 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
-
   const logout = () => {
-    window.localStorage.removeItem('token')
-  }
+    window.localStorage.removeItem("token");
+  };
 
   return (
-    <nav className="header-container">
-      <div class="top-nav">
-
-
+    <div className="header-container">
+      <div className="logo-container">
+        <img
+          src={require("../images/am-logo-header.png")}
+          alt="Business Logo"
+          className="logo"
+        />
       </div>
-      <div className="bottom-nav">
-          <ul>
-              <li><Link to="/dashboard">PRODUCTS</Link></li>
-              <li><Link to="/sell">SELL</Link></li>
-              <li>MY ADS</li>
-              <li onClick={logout}><Link to="/">LOG OUT</Link></li>
-          </ul>
+
+      <div className="nav-container">
+        <Link to="/sell">Sell</Link>
+        <a href="#">My Products</a>
+        <Link onClick={logout} to="/">
+          Log Out
+        </Link>
       </div>
-    </nav>
+    </div>
   );
 }
 

@@ -18,7 +18,7 @@ p, a {
 
 .App-header {
   background-color: #068460;
-  min-height: 15vh;
+  min-height: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,9 +78,9 @@ p, a {
 }
 
 .listed-items {
-  width: 65%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .picky__dropdown {
@@ -116,7 +116,6 @@ input[type=checkbox] {
 /*Header*/
 .header-container {
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: space-around;
   /* padding: 5px; */
@@ -131,9 +130,21 @@ input[type=checkbox] {
   padding: 5px;
 }
 
+.logo-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-.bottom-nav {
- align-self: center;
+.nav-container {
+  width: 30%;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+}
+
+.nav-container a {
+  color: white;
 }
 
 
@@ -162,6 +173,11 @@ li a, li a:hover {
   padding: 0;
   margin: 0.5% 0;
 }
+
+
+
+
+
 
 .picky__placeholder {
   color: red;

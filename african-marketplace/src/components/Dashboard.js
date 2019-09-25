@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ProductList from "./ProductList";
+// import ProductList from "./ProductList";
 import Header from "./Header";
 import axiosWithAuth from "../utilites/axiosWithAuth";
-import NavTab from './NavigationTab'
+import NavTab from "./NavigationTab";
 
 const Dashboard = () => {
   const [pricingData, setPricingData] = useState([]);
@@ -35,9 +35,11 @@ const Dashboard = () => {
 
   return (
     <>
-      <Header />
-      <NavTab uniqueCategorySet={uniqueCategorySet}/>
-      <ProductList pricingData={pricingData} categories={categories} />
+      <div>
+        <Header className="navigation-area" uniqueCategorySet={uniqueCategorySet} />
+        <NavTab uniqueCategorySet={uniqueCategorySet} pricingData={pricingData}  />
+      </div>
+      {/* <ProductList pricingData={pricingData} categories={categories} /> */}
     </>
   );
 };
