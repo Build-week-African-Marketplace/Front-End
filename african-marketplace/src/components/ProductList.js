@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Picky from "react-picky";
 import axiosWithAuth from "../utilites/axiosWithAuth";
 // import { render } from "react-dom";
-// import "react-picky/dist/picky.css";
+import "react-picky/dist/picky.css";
 
 function ProductList() {
   //STATES AND EVENT HANDLERS

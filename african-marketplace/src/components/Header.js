@@ -9,6 +9,10 @@ function Header() {
 
   return (
     <nav className="header-container">
+      <div class="top-nav">
+
+
+      </div>
       <div className="bottom-nav">
           <ul>
               <li><Link to="/dashboard">PRODUCTS</Link></li>
