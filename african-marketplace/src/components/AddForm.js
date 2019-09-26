@@ -2,11 +2,10 @@ import React from "react";
 import axiosWithAuth from "../utilites/axiosWithAuth";
 import { Link } from 'react-router-dom'
 
-import { Container, Header, Button, Form  } from 'semantic-ui-react'
+import { Container, Header, Button, Form, Message  } from 'semantic-ui-react'
 
 class AddForm extends React.Component {
   
-
   state = {
     productData: {
       productName: '',
@@ -40,7 +39,8 @@ class AddForm extends React.Component {
     axiosWithAuth()
       .post(`/products/add/`, this.state.productData)
       .then(res => {
-        console.log("Product added", res);
+        this.props.setItemToAdded(this.state.productData.productName);
+        this.props.setItemAdded(true);
       })
       .catch(err => console.log('Oh-oh, something wrong', err));
   };
@@ -49,7 +49,8 @@ class AddForm extends React.Component {
   render() {
   return (
     <Container text>
-      <Header as='h3'>Add new product</Header>
+      <div className="AddProduct">
+      <Header as='h2'>Add new product</Header>
       <Form onSubmit={this.login}>
         <Form.Field>
         <label>Product Name</label>
@@ -78,9 +79,23 @@ class AddForm extends React.Component {
             onChange={this.handleChange}
           />
         </Form.Field>
-          <Button primary type='submit'>Add product</Button>
-          <Button secondary><Link to='/sell'>Back to selling</Link></Button>
+        {this.props.itemAdded && (<div>
+          <Message info compact>
+            <Message.Header>
+              Item "{this.props.itemToAdded}" was successfully added!
+            </Message.Header>
+            <p>
+              You can check it in personal selling list
+            </p>
+            </Message>
+          </div>)}
+
+          <div className="AddBtns">
+            <Button primary type='submit'>Add product</Button>
+            <Button secondary><Link to='/sell'>Back to selling</Link></Button>
+          </div>
         </Form>
+        </div>
     </Container>
   );
   }

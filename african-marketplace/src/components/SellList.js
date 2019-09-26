@@ -9,7 +9,8 @@ const SellList = () => {
     const [productsList, setProductsList] = useState([]);
     const [update, setUpdate] = useState('');
     const [position, setPosition] = useState(0);
-    
+    const [edited, setEdited] = useState('');
+    const [editing, setEditing] = useState(false);
  
     useEffect(() => {
         console.log(`Position was switched to: ${position}`);
@@ -20,7 +21,7 @@ const SellList = () => {
 
     useEffect(() => {
         getSomeProducts(position);
-      }, [update, position]);
+      }, [update, position, edited]);
     
     const getData = () => {
     axiosWithAuth()
@@ -54,7 +55,8 @@ const SellList = () => {
         setPosition(0)
     };
     const toGlobal = () => {
-        setPosition(1)
+        setPosition(1);
+        setEditing(false);
     };
   
     return (
@@ -73,7 +75,8 @@ const SellList = () => {
                     price={product.price} 
                     description={product.description} 
                     setUpdate={setUpdate} 
-                    position={position} />
+                    position={position}
+                    setEdited={setEdited}/>
                 ))}
         </Card.Group>
       </div>
