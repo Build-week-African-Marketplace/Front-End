@@ -300,7 +300,8 @@ li a:hover {
 }
 
 #root>div>div>div>form>button.ui.secondary.button>a,
-#root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a {
+#root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a,
+#root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.secondary.button > a {
   color: white;
 
 }
@@ -313,10 +314,6 @@ li a:hover {
   display: flex;
   justify-content: space-around;
 }
-
-
-
-
 
 // Dark mode
 
@@ -347,6 +344,24 @@ li a:hover {
   display:flex;
   justify-content: space-between;
 }
+
+// Some login things
+.LoginBtns {
+  margin: 2% 0; 
+}
+#root > div > div.ui.text.container > div > form > div > p {
+  color:red;
+  margin: 1% 0;
+}
+#root > div > div.ui.text.container > div > form > div > input {
+  border-radius: 15px;
+  padding: 1%;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+
+// DARK-MODE
 
 .dark-mode {
   color: #fff;
@@ -464,7 +479,8 @@ li a:hover {
   #root>div>div>div.ui.centered.cards>div>div.EditBlock>form>div>button,
   #root>div>div>div>form>div.AddBtns>button.ui.primary.button,
   #root>div>div>div.SellTop>button.ui.primary.button,
-  #root>div>div>form>button.ui.primary.button {
+  #root>div>div>form>button.ui.primary.button,
+  #root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.primary.button {
     background: rgb(171, 81, 223);
   }
 
@@ -616,5 +632,5 @@ $breakpoint-tablet: 1372px;
     margin-left: 4%;
     margin-bottom: 5%;
   }
-
+  
 }
