@@ -217,11 +217,16 @@ li a, li a:hover {
 #root > div > div > div > form > div:nth-child(3) > input[type=text] {
     margin-bottom: 4%;
 }
-#root > div > div > div > form > button.ui.secondary.button > a {
+#root > div > div > div > form > button.ui.secondary.button > a, 
+#root > div > div > div > form > div.AddBtns > button.ui.secondary.button > a {
     color: white;
 }
 #root > div > div > div > form > div:nth-child(4) > div {
     margin-bottom: 5%;
+}
+.AddBtns {
+    display: flex;
+    justify-content: space-around;
 }
 
 // Dark mode
@@ -266,7 +271,12 @@ li a, li a:hover {
         background-color: rgb(81, 86, 95);
         }
     
-    .header, .meta, .description, .ui.button {
+    .header, 
+    .meta, 
+    .description, 
+    .ui.button, 
+    #root > div > div > div > form > div > label,
+    #root > div > div > div > form > div:nth-child(4) > div > p {
         color: white !important;
         }   
         
@@ -278,7 +288,7 @@ li a, li a:hover {
         }
 
     #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1):hover{
-            background: #fa9a3a;
+        background: #fa9a3a;
         }
 
     #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
@@ -292,8 +302,22 @@ li a, li a:hover {
         background: rgb(238, 121, 121);
         }
         
-    #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button {
-            background: rgb(171, 81, 223);
+    #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button,
+    #root > div > div > div > form > div.AddBtns > button.ui.primary.button,
+    #root > div > div > div.SellTop > button.ui.primary.button {
+        background: rgb(171, 81, 223);
         }     
-
+    
+    .AddProduct, .ui.text.container {
+        background-color: #51565f !important;
+        }
+    
+    #root > div > div > div > form > div:nth-child(4) > div {
+        background-color: #1F2022;
+        box-shadow: none;
+    }
+    
+    .AddProduct {
+        border-radius: 15px;
+    }
 }

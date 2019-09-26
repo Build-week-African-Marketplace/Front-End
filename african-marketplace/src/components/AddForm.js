@@ -90,8 +90,10 @@ class AddForm extends React.Component {
             </Message>
           </div>)}
 
-          <Button primary type='submit'>Add product</Button>
-          <Button secondary><Link to='/sell'>Back to selling</Link></Button>
+          <div className="AddBtns">
+            <Button primary type='submit'>Add product</Button>
+            <Button secondary><Link to='/sell'>Back to selling</Link></Button>
+          </div>
         </Form>
         </div>
     </Container>
