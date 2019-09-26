@@ -13,7 +13,7 @@
   
   .MuiTab-wrapper {
     color: white !important;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800 !important;
     margin-top: 12%;
     font-family: 'Raleway';
@@ -24,7 +24,7 @@
   }
 
   .listed-items {
-      background-color: #F4F8F7 !important;
+      background-color: #F4F8F7;
   }
 
   .product {

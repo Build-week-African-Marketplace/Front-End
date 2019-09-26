@@ -7,7 +7,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import '../NavBarOverrides.css'
+import "../NavBarOverrides.css";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -72,7 +72,7 @@ export default function NavTab(props) {
         >
           <Tab label="All" {...a11yProps(0)} />
           {props.uniqueCategorySet.map((category, index) => (
-            <Tab label={category} {...a11yProps(index + 1)} key={index+1} />
+            <Tab label={category} {...a11yProps(index + 1)} key={index + 1} />
           ))}
         </Tabs>
       </AppBar>
@@ -81,33 +81,41 @@ export default function NavTab(props) {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <div className="listed-items">
-            {props.pricingData.map((product, index) => (
-              <div key={index+1} className="product">
-                <img src={product.image} alt={product.productName} />
-                <h3>{product.productName}</h3>
-                <p>${product.price}</p>
-                <p>{product.subCategory}</p>
-              </div>
-            ))}
+          <div className="listed-items-container">
+            <div className="listed-items">
+              {props.pricingData.map((product, index) => (
+                <div key={index + 1} className="product">
+                  <img src={product.image} alt={product.productName} />
+                  <h3>{product.productName}</h3>
+                  <p className="price">${product.price}</p>
+                  <p>{product.subCategory}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </TabPanel>
 
         {props.uniqueCategorySet.map((category, index) => (
-          <TabPanel value={value} index={index + 1} dir={theme.direction} key={index+1}>
-            <div className="listed-items">
-              {props.pricingData
-                .filter(product => product.subCategory === category)
-                .map((product, index) => (
-                  <div key={index+1} className="product">
-                    <img src={product.image} alt={product.productName} />
-                    <h3>{product.productName}</h3>
-                    <p>${product.price}</p>
-                    <p>{product.subCategory}</p>
-                  </div>
-                ))}
+          <TabPanel
+            value={value}
+            index={index + 1}
+            dir={theme.direction}
+            key={index + 1}
+          >
+            <div className="listed-items-container">
+              <div className="listed-items">
+                {props.pricingData
+                  .filter(product => product.subCategory === category)
+                  .map((product, index) => (
+                    <div key={index + 1} className="product">
+                      <img src={product.image} alt={product.productName} />
+                      <h3>{product.productName}</h3>
+                      <p className="price">${product.price}</p>
+                      <p>{product.subCategory}</p>
+                    </div>
+                  ))}
+              </div>
             </div>
           </TabPanel>
         ))}
