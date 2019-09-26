@@ -34,3 +34,7 @@
   .MuiButtonBase-root:focus  {
         outline: none !important;
   }
+
+  .makeStyles-root-115 {
+      width: 100% !important;
+  }
