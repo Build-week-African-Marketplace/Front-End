@@ -76,9 +76,7 @@ const SellList = () => {
                     description={product.description} 
                     setUpdate={setUpdate} 
                     position={position}
-                    setEdited={setEdited}
-                    editing={editing}
-                    setEditing={setEditing} />
+                    setEdited={setEdited}/>
                 ))}
         </Card.Group>
       </div>

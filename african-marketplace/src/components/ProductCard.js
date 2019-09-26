@@ -12,6 +12,7 @@ const initialItem = {
 
 const ProductCard = (props) =>  {
 
+    const [editing, setEditing] = useState(false);
     const [itemToEdit, setItemToEdit] = useState(initialItem);
     
     const saveEdit = e => {
@@ -25,17 +26,18 @@ const ProductCard = (props) =>  {
         .catch(err => console.log('Oh-oh, something wrong', err));
     };
 
-    const setEditing = props.setEditing;
     
     function DeleteBtn(position) {
     const isLocal = position;
     if (isLocal.position === 0) {
-        return <CardBtn id={props.id} setUpdate={props.setUpdate} setEditing={props.setEditing} editing={props.editing} />
+        return <CardBtn id={props.id} setUpdate={props.setUpdate} setEditing={setEditing} editing={editing} />
     }
     else {
         return null;
         }
     }
+
+
 
     return (
 
@@ -48,7 +50,7 @@ const ProductCard = (props) =>  {
         
         <DeleteBtn position={props.position} />
         
-        {props.editing && (
+        {editing && (
         <div className="EditBlock">
             <Form onSubmit={saveEdit}>
                 
