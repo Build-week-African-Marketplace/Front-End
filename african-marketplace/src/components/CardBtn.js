@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react';
+import { Link } from "react-router-dom";
 
 import { axiosWithAuth } from '../utilites/axiosWithAuth';
 
@@ -19,7 +20,7 @@ const CardBtn = (props) =>  {
     return (
 
     <div className="BtnCards">
-        <Button>Edit</Button>
+        <Button><Link to="/update-item/:id">Edit</Link></Button>
         <Button onClick={deleteProduct}>Delete</Button>
     </div>
     );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -9,8 +9,12 @@ import LoginForm from './components/Login';
 import Signup from './components/Signup';
 import Sell from './components/Sell';
 import AddProduct from './components/AddProduct';
+import UpdateItem from './components/UpdateItem';
 
 function App() {
+
+  const [editedItem, setEditedItem] = useState('');
+
   return (
     <Router>
       <div className="App">
@@ -24,6 +28,12 @@ function App() {
         <PrivateRoute path="/dashboard" component={Dashboard} />
         <PrivateRoute path="/sell" component={Sell} />
         <PrivateRoute path="/myads" component={AddProduct} />
+        <PrivateRoute
+          path="/update-item/:id"
+          render={props => {
+            return <UpdateItem {...props} editedItem={editedItem} setEditedItem={setEditedItem} />;
+        }}  
+      />
       </div>
     </Router>
   );
