@@ -322,7 +322,7 @@ li a, li a:hover {
     #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button,
     #root > div > div > div > form > div.AddBtns > button.ui.primary.button,
     #root > div > div > div.SellTop > button.ui.primary.button,
-    #root > div > div > form > button.ui.primary.button {
+    #root > div > div > div > form > button.ui.primary.button {
         background: rgb(171, 81, 223);
         }     
     
@@ -338,4 +338,17 @@ li a, li a:hover {
     .AddProduct {
         border-radius: 15px;
     }
+}
+
+// Some login things
+.LoginBlock {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 0 12.5%;
+}
+#root > div > div > div > form > div > input {
+  width: 70%;
+  border-radius: 10px;
+  margin-bottom: 3%;
 }
