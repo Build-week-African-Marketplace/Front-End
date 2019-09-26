@@ -114,6 +114,12 @@ input[type=checkbox] {
   width: 100%;
 }
 
+.product .price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #068460;
+}
+
 
 /*Header*/
 .header-container {
@@ -125,6 +131,10 @@ input[type=checkbox] {
   position: sticky;
 }
 
+.dark-mode__toggle {
+  margin-top: 2.5%;
+}
+
 .top-nav, .bottom-nav {
   width: 100%;
   margin-top: 1%;
@@ -133,7 +143,7 @@ input[type=checkbox] {
 }
 
 .logo-container {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
 }
@@ -151,6 +161,11 @@ input[type=checkbox] {
   font-family: Raleway;
   font-size: 1.3rem;
 }
+
+.nav-container a:hover {
+color:rgb(212,191,54)
+}
+
 
 li a, li a:hover {
   color: white;
@@ -321,11 +336,67 @@ li a, li a:hover {
         }
     
     .header-container {
-        background-color: rgb(48, 50, 54);
+        background-color:  #1F2022;
         }
 
     #root > div > div > div.ui.centered.cards > div > div.content, .EditBlock{
         background-color: rgb(81, 86, 95);
+        }
+
+        //NAV CONTAINER
+        .nav-container a:hover {
+          color: #fa9a3a;
+        }
+
+        // MUI OVERRIDES
+        .PrivateTabIndicator-colorPrimary-63 {
+          background-color: white !important;
+        }
+        
+        .makeStyles-root-1 {
+          width: 100% !important;
+        }
+        
+        .MuiTabs-flexContainer {
+          background-color:  #1F2022 !important;
+        }
+
+        
+        .MuiTab-wrapper {
+          color: white !important;
+          font-size: 0.9rem;
+          font-weight: 800 !important;
+          margin-top: 12%;
+          font-family: 'Raleway';
+        }
+      
+        .MuiTab-textColorPrimary.Mui-selected {
+            color: #068460 !important;
+        }
+
+        .react-swipeable-view-container, .MuiTypography-body1  {
+          background-color: rgb(59,68,81);
+        }
+      
+
+        //Listed Products
+        .listed-items {
+            background-color: rgb(59,68,81);
+        }
+      
+        .product {
+          background-color: rgb(59,68,81);
+          box-shadow: 1px 1px 1px 2px  #fa9a3a, -5px -5px 30px 7px rgb(59,68,81);
+        }
+
+        .product .price {
+          font-size: 1.2rem;
+          font-weight: 800;
+          color: #f68819;
+        }
+      
+        .MuiButtonBase-root:focus  {
+              outline: none !important;
         }
     
    

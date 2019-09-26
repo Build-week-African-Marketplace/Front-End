@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <div>
             <h1>
               African Marketplace App
@@ -36,10 +36,10 @@ function App() {
               className={darkMode ? 'toggle toggled' : 'toggle'}
               />
             </div>
-        </header>
+        </header> */}
         <Route exact path="/" component={LoginForm} />
         <Route path="/signup" component={Signup} />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <PrivateRoute toggleMode={toggleMode} darkMode = {darkMode} path="/dashboard" component={Dashboard} />
         <PrivateRoute path="/sell" component={Sell} />
         <PrivateRoute path="/myads" component={AddProduct} />
       </div>
