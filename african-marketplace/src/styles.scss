@@ -207,3 +207,17 @@ li a, li a:hover {
 .EditBlock {
     margin: 3% 0;
 }
+
+// Add product component
+.AddProduct {
+    padding: 2% 0 0 0;
+}
+#root > div > div > div > form > div:nth-child(3) > input[type=text] {
+    margin-bottom: 4%;
+}
+#root > div > div > div > form > button.ui.secondary.button > a {
+    color: white;
+}
+#root > div > div > div > form > div:nth-child(4) > div {
+    margin-bottom: 5%;
+}

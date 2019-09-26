@@ -93,8 +93,8 @@ const ProductCard = (props) =>  {
             </label>
 
             <div className="button-row">
-                <Button type="submit">save</Button>
-                <Button onClick={() => setEditing(false)}>cancel</Button>
+                <Button type="submit">Save</Button>
+                <Button onClick={() => setEditing(false)}>Cancel</Button>
             </div>
             </Form>
         </div>
