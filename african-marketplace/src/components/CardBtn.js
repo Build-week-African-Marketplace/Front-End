@@ -16,11 +16,15 @@ const CardBtn = (props) =>  {
           .catch(err => console.log(err));
     };
 
+    const setEdit = () => {
+        props.setEditing(!props.editing)
+    };
+
 
     return (
 
     <div className="BtnCards">
-        <Button>Edit</Button>
+        <Button onClick={setEdit}>Edit</Button>
         <Button onClick={deleteProduct}>Delete</Button>
     </div>
     );

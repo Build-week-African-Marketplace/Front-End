@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card } from 'semantic-ui-react'
+import { Card, Button, Form } from 'semantic-ui-react'
 import { axiosWithAuth } from '../utilites/axiosWithAuth';
 
 import CardBtn from './CardBtn';
@@ -15,6 +15,7 @@ const ProductCard = (props) =>  {
     const [editing, setEditing] = useState(false);
     const [itemToEdit, setItemToEdit] = useState(initialItem);
     // console.log("Item to edit: ", itemToEdit)
+        // console.log("Show: ", editing)
 
     const editItem = item => {
         setEditing(true);
@@ -36,7 +37,7 @@ const ProductCard = (props) =>  {
     function DeleteBtn(position) {
     const isLocal = position;
     if (isLocal.position === 0) {
-        return <CardBtn id={props.id} setUpdate={props.setUpdate}/>
+        return <CardBtn id={props.id} setUpdate={props.setUpdate} setEditing={setEditing} editing={editing} />
     }
     else {
         return null;
@@ -56,44 +57,48 @@ const ProductCard = (props) =>  {
         
         <DeleteBtn position={props.position} />
         
-        <form onSubmit={saveEdit}>
-          <legend>Edit item</legend>
-          <label>
-            Product Name:
-            <input
-              onChange={e =>
-                setItemToEdit({ ...itemToEdit, productName: e.target.value })
-              }
-              value={itemToEdit.productName}
-            />
-          </label>
+        {editing && (
+        <div className="EditBlock">
+            <Form onSubmit={saveEdit}>
+                
+            <legend>Edit item</legend>
+            <label>
+                Product Name:
+                <input
+                onChange={e =>
+                    setItemToEdit({ ...itemToEdit, productName: e.target.value })
+                }
+                value={itemToEdit.productName}
+                />
+            </label>
 
-          <label>
-            Price:
-            <input
-              onChange={e =>
-                setItemToEdit({ ...itemToEdit, price: e.target.value })
-              }
-              value={itemToEdit.price}
-            />
-          </label>
-          
-          <label>
-            Description:
-            <input
-              onChange={e =>
-                setItemToEdit({ ...itemToEdit, description: e.target.value })
-              }
-              value={itemToEdit.description}
-            />
-          </label>
+            <label>
+                Price:
+                <input
+                onChange={e =>
+                    setItemToEdit({ ...itemToEdit, price: e.target.value })
+                }
+                value={itemToEdit.price}
+                />
+            </label>
+            
+            <label>
+                Description:
+                <input
+                onChange={e =>
+                    setItemToEdit({ ...itemToEdit, description: e.target.value })
+                }
+                value={itemToEdit.description}
+                />
+            </label>
 
-          <div className="button-row">
-            <button type="submit">save</button>
-            <button onClick={() => setEditing(false)}>cancel</button>
-          </div>
-        </form>
-
+            <div className="button-row">
+                <Button type="submit">save</Button>
+                <Button onClick={() => setEditing(false)}>cancel</Button>
+            </div>
+            </Form>
+        </div>
+        )}
 
     </Card>
     );

@@ -192,8 +192,18 @@ li a, li a:hover {
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
 }
+#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1):hover{
+    background: rgb(165, 220, 236);
+  }
 #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
-  background: rgb(231, 81, 81);
+  background: rgb(228, 115, 115);
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
+}
+#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n):hover{
+    background: rgb(238, 121, 121);
+  }
+
+.EditBlock {
+    margin: 3% 0;
 }
