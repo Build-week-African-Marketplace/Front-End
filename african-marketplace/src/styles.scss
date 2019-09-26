@@ -20,11 +20,13 @@ p, a {
   background-color: #068460;
   min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .Dashboard-block {
@@ -249,10 +251,14 @@ li a, li a:hover {
 
 .dark-mode {
     color: #fff;
-    background-color: #313843;
+    background-color: #3b4452;
 
-.App-header {
-    background-color: #1F2022;
-    border: none;
-    }
+    .App-header {
+        background-color: #1F2022;
+        border: none;
+        }
+    
+    .header-container {
+        background-color: rgb(48, 50, 54);
+        }
 }

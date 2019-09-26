@@ -25,9 +25,11 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>
-            African Marketplace App
-          </h1>
+          <div>
+            <h1>
+              African Marketplace App
+            </h1>
+          </div>
             <div className="dark-mode__toggle">
               <div
               onClick={toggleMode}
