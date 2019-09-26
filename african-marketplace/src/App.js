@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './styles.scss';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -11,6 +11,15 @@ import Sell from './components/Sell';
 import Login from "./components/Login";
 
 function App() {
+
+  const [darkMode, setDarkMode] = useDarkMode();
+  console.log("Your mode is dark: ", darkMode)
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -24,6 +33,7 @@ function App() {
         <Route path="/login" component={Login} />
         <PrivateRoute path="/dashboard" component={Dashboard} />
         <PrivateRoute path="/sell" component={Sell} />
+        <PrivateRoute path="/myads" component={AddProduct} />
       </div>
     </Router>
   );
