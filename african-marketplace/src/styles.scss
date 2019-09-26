@@ -290,10 +290,6 @@ li a:hover {
   width: 40%;
 }
 
-.EditBlock {
-  // margin: 3% 0;
-}
-
 // Add product component
 .AddProduct {
   padding: 2% 0 0 0;
@@ -306,6 +302,7 @@ li a:hover {
 #root>div>div>div>form>button.ui.secondary.button>a,
 #root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a {
   color: white;
+
 }
 
 #root>div>div>div>form>div:nth-child(4)>div {
@@ -580,5 +577,6 @@ $breakpoint-tablet: 1370px;
 
   .MuiTab-wrapper {
     font-size: 0.75rem !important;
-  }
+  
+}
 }

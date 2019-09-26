@@ -8,6 +8,7 @@ import PrivateRoute from './components/PrivateRoute';
 import LoginForm from './components/Login';
 import Signup from './components/Signup';
 import Sell from './components/Sell';
+import Login from "./components/Login";
 import AddProduct from './components/AddProduct';
 import useDarkMode from "./hooks/useDarkMode";
 
@@ -25,6 +26,7 @@ function App() {
     <Router>
       <div className="App">
         {/* <header className="App-header">
+
           <div>
             <h1>
               African Marketplace App
