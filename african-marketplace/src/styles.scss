@@ -301,7 +301,8 @@ li a:hover {
 
 #root>div>div>div>form>button.ui.secondary.button>a,
 #root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a,
-#root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.secondary.button > a {
+#root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.secondary.button > a,
+#root > div > div.ui.text.container > div > form > div.SignupBtns > button.ui.secondary.button > a {
   color: white;
 
 }
@@ -346,7 +347,7 @@ li a:hover {
 }
 
 // Some login things
-.LoginBtns {
+.LoginBtns, .SignupBtns {
   margin: 2% 0; 
 }
 #root > div > div.ui.text.container > div > form > div > p {
@@ -359,6 +360,9 @@ li a:hover {
   width: 50%;
   margin-bottom: 1%;
 }
+
+// Some signup things
+
 
 
 // DARK-MODE
@@ -480,7 +484,8 @@ li a:hover {
   #root>div>div>div>form>div.AddBtns>button.ui.primary.button,
   #root>div>div>div.SellTop>button.ui.primary.button,
   #root>div>div>form>button.ui.primary.button,
-  #root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.primary.button {
+  #root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.primary.button,
+  #root > div > div.ui.text.container > div > form > div.SignupBtns > button.ui.primary.button {
     background: rgb(171, 81, 223);
   }
 
