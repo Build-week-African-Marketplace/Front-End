@@ -346,7 +346,7 @@ li a:hover {
   justify-content: space-between;
 }
 
-// Some login things
+// Some login/signup things
 .LoginBtns, .SignupBtns {
   margin: 2% 0; 
 }
@@ -361,8 +361,13 @@ li a:hover {
   margin-bottom: 1%;
 }
 
-// Some signup things
-
+#root > div > div.Outheader-container > div.dark-mode__toggle {
+  margin-right: 2%;
+}
+#root > div > div.Outheader-container > div:nth-child(1) > a > img {
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
 
 
 // DARK-MODE
