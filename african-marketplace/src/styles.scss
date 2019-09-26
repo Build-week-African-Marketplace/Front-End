@@ -207,7 +207,7 @@ li a, li a:hover {
   }
 
 .EditBlock {
-    margin: 3% 0;
+    // margin: 3% 0;
 }
 
 // Add product component
@@ -261,4 +261,39 @@ li a, li a:hover {
     .header-container {
         background-color: rgb(48, 50, 54);
         }
+
+    #root > div > div > div.ui.centered.cards > div > div.content, .EditBlock{
+        background-color: rgb(81, 86, 95);
+        }
+    
+    .header, .meta, .description, .ui.button {
+        color: white !important;
+        }   
+        
+    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1){
+        background: #f68819;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        }
+
+    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1):hover{
+            background: #fa9a3a;
+        }
+
+    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
+        background: rgb(228, 115, 115);
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        }
+
+    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n):hover{
+        background: rgb(238, 121, 121);
+        }
+        
+    #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button {
+            background: rgb(171, 81, 223);
+        }     
+
 }
