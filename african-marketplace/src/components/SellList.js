@@ -10,7 +10,7 @@ const SellList = () => {
     const [update, setUpdate] = useState('');
     const [position, setPosition] = useState(0);
     const [edited, setEdited] = useState('');
-    
+    const [editing, setEditing] = useState(false);
  
     useEffect(() => {
         console.log(`Position was switched to: ${position}`);
@@ -55,7 +55,8 @@ const SellList = () => {
         setPosition(0)
     };
     const toGlobal = () => {
-        setPosition(1)
+        setPosition(1);
+        setEditing(false);
     };
   
     return (
@@ -75,7 +76,9 @@ const SellList = () => {
                     description={product.description} 
                     setUpdate={setUpdate} 
                     position={position}
-                    setEdited={setEdited} />
+                    setEdited={setEdited}
+                    editing={editing}
+                    setEditing={setEditing} />
                 ))}
         </Card.Group>
       </div>
