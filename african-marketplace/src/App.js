@@ -9,7 +9,6 @@ import LoginForm from './components/Login';
 import Signup from './components/Signup';
 import Sell from './components/Sell';
 import AddProduct from './components/AddProduct';
-import UpdateItem from './components/UpdateItem';
 
 function App() {
 
@@ -28,12 +27,6 @@ function App() {
         <PrivateRoute path="/dashboard" component={Dashboard} />
         <PrivateRoute path="/sell" component={Sell} />
         <PrivateRoute path="/myads" component={AddProduct} />
-        <PrivateRoute
-          path="/update-item/:id"
-          render={props => {
-            return <UpdateItem {...props} editedItem={editedItem} setEditedItem={setEditedItem} />;
-        }}  
-      />
       </div>
     </Router>
   );

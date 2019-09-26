@@ -20,7 +20,7 @@ const CardBtn = (props) =>  {
     return (
 
     <div className="BtnCards">
-        <Button><Link to="/update-item/:id">Edit</Link></Button>
+        <Button>Edit</Button>
         <Button onClick={deleteProduct}>Delete</Button>
     </div>
     );
