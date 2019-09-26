@@ -9,6 +9,7 @@ const SellList = () => {
     const [productsList, setProductsList] = useState([]);
     const [update, setUpdate] = useState('');
     const [position, setPosition] = useState(0);
+    const [edited, setEdited] = useState('');
     
  
     useEffect(() => {
@@ -20,7 +21,7 @@ const SellList = () => {
 
     useEffect(() => {
         getSomeProducts(position);
-      }, [update, position]);
+      }, [update, position, edited]);
     
     const getData = () => {
     axiosWithAuth()
@@ -73,7 +74,8 @@ const SellList = () => {
                     price={product.price} 
                     description={product.description} 
                     setUpdate={setUpdate} 
-                    position={position} />
+                    position={position}
+                    setEdited={setEdited} />
                 ))}
         </Card.Group>
       </div>

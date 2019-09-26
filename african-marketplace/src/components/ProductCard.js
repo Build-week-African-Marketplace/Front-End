@@ -6,7 +6,7 @@ import CardBtn from './CardBtn';
 
 const initialItem = {
     productName: '',
-    price: 0,
+    price: '',
     description: ''
   };
 
@@ -14,7 +14,7 @@ const ProductCard = (props) =>  {
 
     const [editing, setEditing] = useState(false);
     const [itemToEdit, setItemToEdit] = useState(initialItem);
-    console.log("Item to edit: ", itemToEdit)
+    // console.log("Item to edit: ", itemToEdit)
 
     const editItem = item => {
         setEditing(true);
@@ -27,6 +27,7 @@ const ProductCard = (props) =>  {
         .put(`/products/update/${props.id}`, itemToEdit)
         .then(res => {
         console.log(`Updated data of ${itemToEdit.productName}`, res);
+        props.setEdited(res);
     })
         .catch(err => console.log('Oh-oh, something wrong', err));
     };
