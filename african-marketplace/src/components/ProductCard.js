@@ -1,24 +1,17 @@
 import React from 'react';
 import { Card, Button } from 'semantic-ui-react'
 
+import CardBtn from './CardBtn';
 import { axiosWithAuth } from '../utilites/axiosWithAuth';
 
 const ProductCard = (props) =>  {
 
-    const deleteProduct = () => {
-        axiosWithAuth()
-          .delete(`/products/delete/${props.id}`)
-          .then(res => {
-              console.log(`Product with id ${props.id} deleted`);
-              props.setUpdate(res)
-          })
-          .catch(err => console.log(err));
-    };
+
 
     function DeleteBtn(position) {
     const isLocal = position;
     if (isLocal.position === 0) {
-        return <Button onClick={deleteProduct}>Delete</Button> ;
+        return <CardBtn id={props.id} setUpdate={props.setUpdate}/>
     }
     else {
         return null;
