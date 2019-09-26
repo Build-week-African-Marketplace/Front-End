@@ -6,7 +6,6 @@ import Login from "./Login";
 
 function LoginForm(props) {
 
-    console.log(props)
 
   return (
     <>

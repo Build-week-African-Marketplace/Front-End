@@ -128,7 +128,7 @@ input[type=checkbox] {
 
 
 /*Header*/
-.header-container {
+.header-container, .Outheader-container {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -343,6 +343,11 @@ li a:hover {
   left: 18px;
 }
 
+.Outheader-container {
+  display:flex;
+  justify-content: space-between;
+}
+
 .dark-mode {
   color: #fff;
   background-color: #3b4452;
@@ -352,7 +357,7 @@ li a:hover {
     border: none;
   }
 
-  .header-container {
+  .header-container, .Outheader-container {
     background-color: #1F2022;
   }
 
@@ -482,6 +487,8 @@ li a:hover {
 //MEDUA QUERIES
 $breakpoint-mobile: 768px;
 
+
+
 @media screen and (max-width: $breakpoint-mobile) {
 
   .header-container {
@@ -525,6 +532,16 @@ $breakpoint-mobile: 768px;
   .MuiTab-wrapper {
     font-size: 0.75rem !important;
   }
+
+  // Login things
+  #root > div > div.Outheader-container > div.dark-mode__toggle {
+    margin-right: 2%;
+  }
+  #root > div > div.Outheader-container > div:nth-child(1) > a > img {
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+
 }
 
 
@@ -590,4 +607,14 @@ $breakpoint-tablet: 1372px;
     font-size: 0.75rem !important;
 
   }
+
+  // Login things
+  #root > div > div.Outheader-container > div.dark-mode__toggle {
+    margin-right: 2%;
+  }
+  #root > div > div.Outheader-container > div:nth-child(1) > a > img {
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+
 }

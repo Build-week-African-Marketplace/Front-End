@@ -19,14 +19,9 @@ function OutHeader() {
 
 
   return (
-    <div className="header-container">
-      <div className="dark-mode__toggle">
-        <div
-          onClick={toggleMode}
-          className={darkMode ? "toggle toggled" : "toggle"}
-        />
-      </div>
-      <div className="logo-container">
+    <div className="Outheader-container">
+      
+      <div>
         <Link to="/dashboard">
           <img
             src={require("../images/am-logo-header.png")}
@@ -34,6 +29,13 @@ function OutHeader() {
             className="logo"
           />
         </Link>
+      </div>
+
+      <div className="dark-mode__toggle">
+        <div
+          onClick={toggleMode}
+          className={darkMode ? "toggle toggled" : "toggle"}
+        />
       </div>
 
     </div>
