@@ -37,8 +37,10 @@ const LoginForm = ({ values, errors, touched, isSubmitting }) => {
       <p className="error">{errors.password}</p>
       )}
       </div>
-      <Button primary type='submit' disabled={isSubmitting}>Login</Button>
-      <Button secondary><Link to="/signup">Sign Up</Link></Button>
+      <div className="LoginBtns">
+        <Button primary type='submit' disabled={isSubmitting}>Login</Button>
+        <Button secondary><Link to="/signup">Sign Up</Link></Button>
+      </div>
     </Form >
     </div>
   );
