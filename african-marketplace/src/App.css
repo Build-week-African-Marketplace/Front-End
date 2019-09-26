@@ -181,3 +181,19 @@ li a, li a:hover {
 .SellTop {
   margin: 2% 0;
 }
+
+/* Card things */
+#root > div > div > div.ui.centered.cards > div > div.BtnCards > button{
+  width: 50% !important;
+  margin: 0 !important;
+}
+#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1){
+  background: rgb(148, 210, 229);
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
+  background: rgb(231, 81, 81);
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}

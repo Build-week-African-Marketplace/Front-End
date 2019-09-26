@@ -18,10 +18,10 @@ const CardBtn = (props) =>  {
 
     return (
 
-    <>
-        <Button onClick={deleteProduct}>Delete</Button>
+    <div className="BtnCards">
         <Button>Edit</Button>
-    </>
+        <Button onClick={deleteProduct}>Delete</Button>
+    </div>
     );
 
 
