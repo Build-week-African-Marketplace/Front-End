@@ -6,6 +6,7 @@ import useDarkMode from "../hooks/useDarkMode";
 function Header() {
   const logout = () => {
     window.localStorage.removeItem("token");
+    window.localStorage.removeItem('userID');
   };
 
   const [darkMode, setDarkMode] = useDarkMode();
