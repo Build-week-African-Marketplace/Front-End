@@ -529,9 +529,9 @@ $breakpoint-mobile: 768px;
 
 
 
-$breakpoint-tablet: 1370px;
+$breakpoint-tablet: 1372px;
 
-@media screen and (max-width: $breakpoint-tablet) and (min-width: 769px){
+@media screen and (max-width: $breakpoint-tablet) and (min-width: 769px) {
 
   .header-container {
     display: flex;
@@ -567,7 +567,18 @@ $breakpoint-tablet: 1370px;
   }
 
   .logo-container {
-    margin-right: 10%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dark-mode__toggle {
+    margin: 0 auto;
+  }
+
+
+  .logo-container img {
+    margin: 0 45px;
   }
 
   .MuiTabs-flexContainer {
@@ -577,6 +588,6 @@ $breakpoint-tablet: 1370px;
 
   .MuiTab-wrapper {
     font-size: 0.75rem !important;
-  
-}
+
+  }
 }
