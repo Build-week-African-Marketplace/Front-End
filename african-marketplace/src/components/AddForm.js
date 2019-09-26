@@ -43,7 +43,7 @@ class AddForm extends React.Component {
     axiosWithAuth()
       .post(`/products/add/`, this.state.productData)
       .then(res => {
-        console.log("Product added", res);
+        this.props.setItemToAdded(this.state.productData.productName);
         this.props.setItemAdded(true);
       })
       .catch(err => console.log('Oh-oh, something wrong', err));
@@ -86,7 +86,7 @@ class AddForm extends React.Component {
         {this.props.itemAdded && (<div>
           <Message info compact>
             <Message.Header>
-              Item "{this.state.productData.productName}" was successfully added!
+              Item "{this.props.itemToAdded}" was successfully added!
             </Message.Header>
             <p>
               You can check it in personal selling list
