@@ -36,6 +36,7 @@ function Header() {
       </div>
 
       <div className="nav-container">
+        <Link to="/dashboard">Home</Link>
         <Link to="/sell">Sell</Link>
         <Link to="/myads">My Products</Link>
         <Link onClick={logout} to="/">

@@ -89,7 +89,7 @@ export default function NavTab(props) {
                   <img src={product.image} alt={product.productName} />
                   <h3>{product.productName}</h3>
                   <p className="price">${product.price}</p>
-                  <p>{product.subCategory}</p>
+                  <p>{product.location} Market</p>
                 </div>
               ))}
             </div>
@@ -112,7 +112,7 @@ export default function NavTab(props) {
                       <img src={product.image} alt={product.productName} />
                       <h3>{product.productName}</h3>
                       <p className="price">${product.price}</p>
-                      <p>{product.subCategory}</p>
+                      <p>{product.location} Market</p>
                     </div>
                   ))}
               </div>

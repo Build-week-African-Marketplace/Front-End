@@ -35,6 +35,7 @@
         outline: none !important;
   }
 
-  .makeStyles-root-115 {
+  div.App:first-child:nth-child(2) {
+      display: inline-block !important;
       width: 100% !important;
   }
