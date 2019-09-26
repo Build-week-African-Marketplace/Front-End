@@ -38,10 +38,10 @@ function App() {
             </div>
         </header> */}
         <Route exact path="/" component={LoginForm} />
-        <Route path="/signup" component={Signup} />
+        <Route exact path="/signup" component={Signup} />
         <PrivateRoute toggleMode={toggleMode} darkMode = {darkMode} path="/dashboard" component={Dashboard} />
-        <PrivateRoute path="/sell" component={Sell} />
-        <PrivateRoute path="/myads" component={AddProduct} />
+        <PrivateRoute exact path="/sell" component={Sell} />
+        <PrivateRoute exact path="/myads" component={AddProduct} />
       </div>
     </Router>
   );

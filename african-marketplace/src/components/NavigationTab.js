@@ -39,10 +39,10 @@ function a11yProps(index) {
   };
 }
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 1000
   }
 }));
 
@@ -129,3 +129,4 @@ export default function NavTab(props) {
     </div>
   );
 }
+
