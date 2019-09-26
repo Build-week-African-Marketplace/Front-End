@@ -9,71 +9,74 @@ const SignupForm = ({ values, errors, touched, isSubmitting }) => {
 
 
   return (
-
-
-
-
-
+    <div className="SignupBlock">
     <Form>
-      <label>
-        Username
+      <div className="SignupPart">
+        <label>
+          Username
+        </label>
+      </div>
+      <div className="SignupPart">
         <Field
           type="text"
           name="username"
         />
-        {touched.username && errors.username && <p className="error">{errors.username}</p>}
-      </label>
-      <label>
-        Password
+      {touched.username && errors.username && <p className="error">{errors.username}</p>}
+      </div>
+      <div className="SignupPart">
+        <label>
+         Password
+        </label>
+      </div>
+      <div className="SignupPart">
         <Field
           type="password"
           name="password"
         />
-        {touched.password && errors.password && (
-          <p className="error">{errors.password}</p>
-        )}
-      </label>
-
-
-      <label>
-        First Name
+      {touched.password && errors.password && (<p className="error">{errors.password}</p>)}
+      </div>
+      <div className="SignupPart">
+        <label>
+          First Name
+        </label>
+      </div>
+      <div className="SignupPart">
         <Field
           type="text"
           name="first_name"
         />
-        {touched.first_name && errors.first_name && <p className="error">{errors.first_name}</p>}
-      </label>
-      <label>
-        Last Name
+      {touched.first_name && errors.first_name && <p className="error">{errors.first_name}</p>}
+      </div>
+      <div className="SignupPart">
+        <label>
+         Last Name
+        </label>
+      </div>
+      <div className="SignupPart">
         <Field
           type="text"
           name="last_name"
         />
-        {touched.last_name && errors.last_name && <p className="error">{errors.last_name}</p>}
-      </label>
-
-      <label>
-        Email
+      {touched.last_name && errors.last_name && <p className="error">{errors.last_name}</p>}
+      </div>  
+      <div className="SignupPart">
+        <label>
+         Email
+        </label>
+      </div>
+      <div className="SignupPart">
         <Field
           type="email"
           name="email"
         />
-        {touched.email && errors.email && (
-          <p className="error">{errors.email}</p>
-        )}
-      </label>
-
-
-
-
-      <Button primary type='submit' disabled={isSubmitting}>Sign Up</Button>
-      <Button secondary><Link to="/">Cancel</Link></Button>
+      {touched.email && errors.email && (<p className="error">{errors.email}</p>)}
+      </div>
+      <div className="SignupBtns">
+        <Button primary type='submit' disabled={isSubmitting}>Sign Up</Button>
+        <Button secondary><Link to="/">Cancel</Link></Button>
+      </div>
     </Form >
-
-
-
-
-
+    </div>
   );
 }
 
@@ -96,16 +99,6 @@ const Signup = withFormik({
     first_name: Yup.string().required("Full name is required"),
     last_name: Yup.string().required("Full name is required")
   }),
-
-
-  /*handleChange(values, {props, setErrors}) {
-    setCredentials({
-      credentials: {
-        ...credentials,
-        [e.target.name]: e.target.value
-      }
-    });
-  },*/
 
   handleSubmit(values, { props, setErrors }) {
     //event.preventDefault();
