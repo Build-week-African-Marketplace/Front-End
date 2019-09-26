@@ -228,7 +228,8 @@ li a, li a:hover {
     margin-bottom: 4%;
 }
 #root > div > div > div > form > div.LoginBtns > button.ui.secondary.button > a, 
-#root > div > div > div > form > div.AddBtns > button.ui.secondary.button > a {
+#root > div > div > div > form > div.AddBtns > button.ui.secondary.button > a,
+#root > div > div > div > form > div.SignupBtns > button.ui.secondary.button > a {
     color: white;
 }
 #root > div > div > div > form > div:nth-child(4) > div {
@@ -322,7 +323,8 @@ li a, li a:hover {
     #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button,
     #root > div > div > div > form > div.AddBtns > button.ui.primary.button,
     #root > div > div > div.SellTop > button.ui.primary.button,
-    #root > div > div > div > form > div.LoginBtns > button.ui.primary.button {
+    #root > div > div > div > form > div.LoginBtns > button.ui.primary.button,
+    #root > div > div > div > form > div.SignupBtns > button.ui.primary.button {
         background: rgb(171, 81, 223);
         }     
     
@@ -340,8 +342,8 @@ li a, li a:hover {
     }
 }
 
-// Some login things
-.LoginBlock {
+// Some login/signup things
+.LoginBlock, .SignupBlock {
   display: flex;
   flex-direction: column;
   width: 75%;
@@ -351,11 +353,12 @@ li a, li a:hover {
   width: 70%;
   border-radius: 10px;
   margin-bottom: 3%;
+  padding: 1%;
 }
 #root > div > div > div > form > div > p {
   margin-bottom: 3%;
-  color: #fa9a3a;
+  color: red;
 }
-.LoginBtns {
+.LoginBtns, .SignupBtns {
   margin-bottom: 3%;
 }
