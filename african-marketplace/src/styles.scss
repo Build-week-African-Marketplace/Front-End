@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-h1, h2, h3, h4, h5 {
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Raleway', sans-serif !important;
 }
 
-p, a {
+p,
+a {
   font-family: 'Muli', sans-serif !important;
 }
 
@@ -45,7 +51,7 @@ p, a {
   margin: 1% 20%;
 }
 
-#root > div > div > form > button.ui.secondary.button > a {
+#root>div>div>form>button.ui.secondary.button>a {
   color: white;
 }
 
@@ -135,7 +141,8 @@ input[type=checkbox] {
   margin-top: 2.5%;
 }
 
-.top-nav, .bottom-nav {
+.top-nav,
+.bottom-nav {
   width: 100%;
   margin-top: 1%;
   color: white;
@@ -163,19 +170,20 @@ input[type=checkbox] {
 }
 
 .nav-container a:hover {
-color:rgb(212,191,54)
+  color: rgb(212, 191, 54)
 }
 
 
-li a, li a:hover {
+li a,
+li a:hover {
   color: white;
 }
 
-#root > div > nav > div {
+#root>div>nav>div {
   margin: 0;
 }
 
-#root > div > nav > div > ul {
+#root>div>nav>div>ul {
   padding: 0;
   margin: 0.5% 0;
 }
@@ -213,6 +221,12 @@ li a, li a:hover {
   /* flex-direction: column; */
 }
 
+
+
+
+
+
+
 .listed-items {
   display: flex;
   flex-wrap: wrap;
@@ -247,213 +261,277 @@ li a, li a:hover {
 }
 
 /* Card things */
-#root > div > div > div.ui.centered.cards > div > div.BtnCards > button{
+#root>div>div>div.ui.centered.cards>div>div.BtnCards>button {
   width: 50% !important;
   margin: 0 !important;
 }
-#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1){
+
+#root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n-1) {
   background: rgb(148, 210, 229);
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
 }
-#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1):hover{
-    background: rgb(165, 220, 236);
-  }
-#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
+
+#root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n-1):hover {
+  background: rgb(165, 220, 236);
+}
+
+#root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n) {
   background: rgb(228, 115, 115);
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
 }
-#root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n):hover{
-    background: rgb(238, 121, 121);
-  }
 
-.button-row {
-    display: flex;
-    justify-content: space-around;
+#root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n):hover {
+  background: rgb(238, 121, 121);
 }
 
-#root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button {
-    margin-top: 2%;
-    width: 40%;
+.button-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+#root>div>div>div.ui.centered.cards>div>div.EditBlock>form>div>button {
+  margin-top: 2%;
+  width: 40%;
 }
 
 .EditBlock {
-    // margin: 3% 0;
+  // margin: 3% 0;
 }
 
 // Add product component
 .AddProduct {
-    padding: 2% 0 0 0;
+  padding: 2% 0 0 0;
 }
-#root > div > div > div > form > div:nth-child(3) > input[type=text] {
-    margin-bottom: 4%;
+
+#root>div>div>div>form>div:nth-child(3)>input[type=text] {
+  margin-bottom: 4%;
 }
-#root > div > div > div > form > button.ui.secondary.button > a, 
-#root > div > div > div > form > div.AddBtns > button.ui.secondary.button > a {
-    color: white;
+
+#root>div>div>div>form>button.ui.secondary.button>a,
+#root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a {
+  color: white;
 }
-#root > div > div > div > form > div:nth-child(4) > div {
-    margin-bottom: 5%;
+
+#root>div>div>div>form>div:nth-child(4)>div {
+  margin-bottom: 5%;
 }
+
 .AddBtns {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
+
+
+
+
 
 // Dark mode
 
 .dark-mode__toggle {
-    background: papayawhip;
-    border-radius: 50px;
-    border: 1px solid black;
-    height: 20px;
-    position: relative;
-    width: 40px;
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
 }
 
 .toggle {
-    background: #f68819;
-    border-radius: 50px;
-    height: 18px;
-    left: 0;
-    position: absolute;
-    transition: 0.2s;
-    width: 20px;
+  background: #f68819;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
 }
 
 .toggled {
-    left: 18px;
+  left: 18px;
 }
 
 .dark-mode {
-    color: #fff;
-    background-color: #3b4452;
+  color: #fff;
+  background-color: #3b4452;
 
-    .App-header {
-        background-color: #1F2022;
-        border: none;
-        }
-    
-    .header-container {
-        background-color:  #1F2022;
-        }
+  .App-header {
+    background-color: #1F2022;
+    border: none;
+  }
 
-    #root > div > div > div.ui.centered.cards > div > div.content, .EditBlock{
-        background-color: rgb(81, 86, 95);
-        }
+  .header-container {
+    background-color: #1F2022;
+  }
 
-        //NAV CONTAINER
-        .nav-container a:hover {
-          color: #fa9a3a;
-        }
+  #root>div>div>div.ui.centered.cards>div>div.content,
+  .EditBlock {
+    background-color: rgb(81, 86, 95);
+  }
 
-        // MUI OVERRIDES
-        .PrivateTabIndicator-colorPrimary-63 {
-          background-color: white !important;
-        }
-        
-        .makeStyles-root-1 {
-          width: 100% !important;
-        }
-        
-        .MuiTabs-flexContainer {
-          background-color:  #1F2022 !important;
-        }
+  //NAV CONTAINER
+  .nav-container a:hover {
+    color: #fa9a3a;
+  }
 
-        
-        .MuiTab-wrapper {
-          color: white !important;
-          font-size: 0.9rem;
-          font-weight: 800 !important;
-          margin-top: 12%;
-          font-family: 'Raleway';
-        }
-      
-        .MuiTab-textColorPrimary.Mui-selected {
-            color: #068460 !important;
-        }
+  // MUI OVERRIDES
+  .PrivateTabIndicator-colorPrimary-63 {
+    background-color: white !important;
+  }
 
-        .react-swipeable-view-container, .MuiTypography-body1  {
-          background-color: rgb(59,68,81);
-        }
-      
+  .makeStyles-root-1 {
+    width: 100% !important;
+  }
 
-        //Listed Products
-        .listed-items {
-            background-color: rgb(59,68,81);
-        }
-      
-        .product {
-          background-color: rgb(59,68,81);
-          box-shadow: 1px 1px 1px 2px  #fa9a3a, -5px -5px 30px 7px rgb(59,68,81);
-        }
+  .MuiTabs-flexContainer {
+    background-color: #1F2022 !important;
+  }
 
-        .product .price {
-          font-size: 1.2rem;
-          font-weight: 800;
-          color: #f68819;
-        }
-      
-        .MuiButtonBase-root:focus  {
-              outline: none !important;
-        }
-    
-   
-    .meta, 
-    .description, 
-    .ui.button, 
-    #root > div > div > div > form > div > label,
-    #root > div > div > div > form > div:nth-child(4) > div > p,
-    #root > div > div > form > div > label,
-    #root > div > div > h2,
-    #root > div > div > h3 {
-        color: white !important;
-        }   
 
-    .header {
-        color: #fa9a3a !important;
-    } 
+  .MuiTab-wrapper {
+    color: white !important;
+    font-size: 0.9rem;
+    font-weight: 800 !important;
+    margin-top: 12%;
+    font-family: 'Raleway';
+  }
 
-    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1){
-        background: #f68819;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 0px;
-        border-top-left-radius: 0px;
-        }
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: #068460 !important;
+  }
 
-    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n-1):hover{
-        background: #fa9a3a;
-        }
+  .react-swipeable-view-container,
+  .MuiTypography-body1 {
+    background-color: rgb(59, 68, 81);
+  }
 
-    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n){
-        background: rgb(228, 115, 115);
-        border-bottom-left-radius: 0px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        }
 
-    #root > div > div > div.ui.centered.cards > div > div.BtnCards > button:nth-child(2n):hover{
-        background: rgb(238, 121, 121);
-        }
-        
-    #root > div > div > div.ui.centered.cards > div > div.EditBlock > form > div > button,
-    #root > div > div > div > form > div.AddBtns > button.ui.primary.button,
-    #root > div > div > div.SellTop > button.ui.primary.button,
-    #root > div > div > form > button.ui.primary.button {
-        background: rgb(171, 81, 223);
-        }     
-    
-    .AddProduct, .ui.text.container {
-        background-color: #51565f !important;
-        }
-    
-    #root > div > div > div > form > div:nth-child(4) > div {
-        background-color: #1F2022;
-        box-shadow: none;
-    }
-    
-    .AddProduct {
-        border-radius: 15px;
-    }
+  //Listed Products
+  .listed-items {
+    background-color: rgb(59, 68, 81);
+  }
+
+  .product {
+    background-color: rgb(59, 68, 81);
+    box-shadow: 1px 1px 1px 2px #fa9a3a, -5px -5px 30px 7px rgb(59, 68, 81);
+  }
+
+  .product .price {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f68819;
+  }
+
+  .MuiButtonBase-root:focus {
+    outline: none !important;
+  }
+
+
+  .meta,
+  .description,
+  .ui.button,
+  #root>div>div>div>form>div>label,
+  #root>div>div>div>form>div:nth-child(4)>div>p,
+  #root>div>div>form>div>label,
+  #root>div>div>h2,
+  #root>div>div>h3 {
+    color: white !important;
+  }
+
+  .header {
+    color: #fa9a3a !important;
+  }
+
+  #root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n-1) {
+    background: #f68819;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  #root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n-1):hover {
+    background: #fa9a3a;
+  }
+
+  #root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n) {
+    background: rgb(228, 115, 115);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  #root>div>div>div.ui.centered.cards>div>div.BtnCards>button:nth-child(2n):hover {
+    background: rgb(238, 121, 121);
+  }
+
+  #root>div>div>div.ui.centered.cards>div>div.EditBlock>form>div>button,
+  #root>div>div>div>form>div.AddBtns>button.ui.primary.button,
+  #root>div>div>div.SellTop>button.ui.primary.button,
+  #root>div>div>form>button.ui.primary.button {
+    background: rgb(171, 81, 223);
+  }
+
+  .AddProduct,
+  .ui.text.container {
+    background-color: #51565f !important;
+  }
+
+  #root>div>div>div>form>div:nth-child(4)>div {
+    background-color: #1F2022;
+    box-shadow: none;
+  }
+
+  .AddProduct {
+    border-radius: 15px;
+  }
+}
+
+
+//MEDUA QUERIES
+$breakpoint-mobile: 768px;
+
+@media screen and (max-width: $breakpoint-mobile) {
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dark-mode__toggle,
+  .logo-container,
+  .nav-container {
+    align-self: center;
+  }
+
+  .nav-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .listed-items {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+  }
+
+  .listed-items-container {
+    width: 100%;
+  }
+
+  .product {
+    width: 65%;
+    margin: 10px auto 10px auto;
+  }
+
+  .MuiTabs-flexContainer {
+    overflow-x: scroll !important;
+    background-color: #068460 !important;
+  }
+
+  .MuiTab-wrapper {
+    font-size: 0.75rem !important;
+  }
 }
