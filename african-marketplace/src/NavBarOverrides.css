@@ -30,3 +30,7 @@
   .product {
     background-color: white;
   }
+
+  .MuiButtonBase-root:focus  {
+        outline: none !important;
+  }
