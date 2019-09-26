@@ -6,10 +6,6 @@ import { Container, Header, Button, Form, Message  } from 'semantic-ui-react'
 
 class AddForm extends React.Component {
   
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     productData: {
       productName: '',

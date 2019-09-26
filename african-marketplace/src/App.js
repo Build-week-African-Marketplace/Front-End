@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.scss';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -11,8 +11,6 @@ import Sell from './components/Sell';
 import AddProduct from './components/AddProduct';
 
 function App() {
-
-  const [editedItem, setEditedItem] = useState('');
 
   return (
     <Router>

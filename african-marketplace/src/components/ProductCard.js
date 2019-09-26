@@ -14,13 +14,6 @@ const ProductCard = (props) =>  {
 
     const [editing, setEditing] = useState(false);
     const [itemToEdit, setItemToEdit] = useState(initialItem);
-    // console.log("Item to edit: ", itemToEdit)
-        // console.log("Show: ", editing)
-
-    const editItem = item => {
-        setEditing(true);
-        setItemToEdit(item);
-      };
     
     const saveEdit = e => {
     e.preventDefault();
