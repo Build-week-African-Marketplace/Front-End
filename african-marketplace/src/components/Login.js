@@ -77,6 +77,7 @@ const Login = withFormik({
         .then(res => {
           console.log("Successful login", res);
           localStorage.setItem('token', res.data.token);
+          localStorage.setItem('userID', res.data.id);
           props.history.push('/dashboard');
         })
         .catch(err => console.log('Oh-oh, something wrong', err));
