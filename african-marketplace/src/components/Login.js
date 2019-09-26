@@ -4,9 +4,9 @@ import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Container, Header, Button } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
-  
-const LoginForm = ({ values, errors, touched, isSubmitting }) => {
 
+  
+const LoginForm = ({ values, errors, touched, isSubmitting, history }) => {
 
   return (
     <div className="LoginBlock">
@@ -75,7 +75,6 @@ const Login = withFormik({
       axiosWithAuth()
         .post('/login', values)
         .then(res => {
-          console.log("Successful login", res);
           localStorage.setItem('token', res.data.token);
           localStorage.setItem('userID', res.data.id);
           props.history.push('/dashboard');

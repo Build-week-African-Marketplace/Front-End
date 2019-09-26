@@ -128,7 +128,7 @@ input[type=checkbox] {
 
 
 /*Header*/
-.header-container {
+.header-container, .Outheader-container {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -300,7 +300,8 @@ li a:hover {
 }
 
 #root>div>div>div>form>button.ui.secondary.button>a,
-#root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a {
+#root>div>div>div>form>div.AddBtns>button.ui.secondary.button>a,
+#root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.secondary.button > a {
   color: white;
 
 }
@@ -313,10 +314,6 @@ li a:hover {
   display: flex;
   justify-content: space-around;
 }
-
-
-
-
 
 // Dark mode
 
@@ -343,6 +340,29 @@ li a:hover {
   left: 18px;
 }
 
+.Outheader-container {
+  display:flex;
+  justify-content: space-between;
+}
+
+// Some login things
+.LoginBtns {
+  margin: 2% 0; 
+}
+#root > div > div.ui.text.container > div > form > div > p {
+  color:red;
+  margin: 1% 0;
+}
+#root > div > div.ui.text.container > div > form > div > input {
+  border-radius: 15px;
+  padding: 1%;
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+
+// DARK-MODE
+
 .dark-mode {
   color: #fff;
   background-color: #3b4452;
@@ -352,7 +372,7 @@ li a:hover {
     border: none;
   }
 
-  .header-container {
+  .header-container, .Outheader-container {
     background-color: #1F2022;
   }
 
@@ -459,7 +479,8 @@ li a:hover {
   #root>div>div>div.ui.centered.cards>div>div.EditBlock>form>div>button,
   #root>div>div>div>form>div.AddBtns>button.ui.primary.button,
   #root>div>div>div.SellTop>button.ui.primary.button,
-  #root>div>div>form>button.ui.primary.button {
+  #root>div>div>form>button.ui.primary.button,
+  #root > div > div.ui.text.container > div > form > div.LoginBtns > button.ui.primary.button {
     background: rgb(171, 81, 223);
   }
 
@@ -481,6 +502,8 @@ li a:hover {
 
 //MEDUA QUERIES
 $breakpoint-mobile: 768px;
+
+
 
 @media screen and (max-width: $breakpoint-mobile) {
 
@@ -525,6 +548,16 @@ $breakpoint-mobile: 768px;
   .MuiTab-wrapper {
     font-size: 0.75rem !important;
   }
+
+  // Login things
+  #root > div > div.Outheader-container > div.dark-mode__toggle {
+    margin-right: 2%;
+  }
+  #root > div > div.Outheader-container > div:nth-child(1) > a > img {
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+
 }
 
 
@@ -590,4 +623,14 @@ $breakpoint-tablet: 1372px;
     font-size: 0.75rem !important;
 
   }
+
+  // Login things
+  #root > div > div.Outheader-container > div.dark-mode__toggle {
+    margin-right: 2%;
+  }
+  #root > div > div.Outheader-container > div:nth-child(1) > a > img {
+    margin-left: 4%;
+    margin-bottom: 5%;
+  }
+  
 }

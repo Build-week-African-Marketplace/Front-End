@@ -5,8 +5,9 @@ import * as Yup from "yup";
 import { Container, Header, Button, } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 
-const SignupForm = ({ values, errors, touched, isSubmitting }) => {
+const SignupForm = ({ values, errors, touched, isSubmitting, history }) => {
 
+  console.log(history)
 
   return (
     <div className="SignupBlock">
@@ -121,7 +122,7 @@ const Signup = withFormik({
         .post('/signup', values)
         .then(res => {
           console.log("Successful signup", res);
-          props.history.push('/dashboard');
+          props.history.push('/');
         })
         .catch(err => console.log('Oh-oh, something wrong', err));
     }
