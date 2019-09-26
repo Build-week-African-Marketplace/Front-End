@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './styles.scss';
 import 'semantic-ui-css/semantic.min.css'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
