@@ -43,7 +43,7 @@ p, a {
   margin: 1% 20%;
 }
 
-#root > div > div > form > button.ui.secondary.button > a {
+#root>div>div>form>button.ui.secondary.button>a {
   color: white;
 }
 
@@ -63,6 +63,72 @@ p, a {
   border: 1px solid lightgrey;
   border-radius: 15px;
 }
+
+/*Header*/
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* padding: 5px; */
+  background-color: #068460;
+  position: sticky;
+}
+
+.top-nav, .bottom-nav {
+  width: 100%;
+  margin-top: 1%;
+  color: white;
+  padding: 5px;
+}
+
+.logo-container {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-container {
+  width: 30%;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.nav-container a {
+  color: white;
+  font-family: Raleway;
+  font-size: 1.3rem;
+}
+
+/* ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 18px;
+  color: white;
+  text-align: right;
+  align-content: center;
+  font-family: 'Raleway';
+  font-weight: 1000;
+  margin-top: 10px;
+} */
+
+li a, li a:hover {
+  color: white;
+}
+
+#root>div>nav>div {
+  margin: 0;
+}
+
+#root>div>nav>div>ul {
+  padding: 0;
+  margin: 0.5% 0;
+}
+
+/* Product */
 
 .products-container {
   display: flex;
@@ -96,88 +162,22 @@ input[type=checkbox] {
   margin-right: 2%;
 }
 
-
 .product {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 350px;
+  width: 16%;
+  height: 360px;
   margin: 25px 5px;
   padding: 25px;
   border-radius: 5px;
   box-shadow: 0px 1px 1px 1px grey, -5px -5px 30px 7px white;
 }
 
-.product>img {
-  width: 100%;
+.product img {
+  width: 85%;
+  height: 60%;
+  background: transparent;
 }
-
-
-/*Header*/
-.header-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  /* padding: 5px; */
-  background-color: #068460;
-  position: sticky;
-}
-
-.top-nav, .bottom-nav {
-  width: 100%;
-  margin-top: 1%;
-  color: white;
-  padding: 5px;
-}
-
-.logo-container {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.nav-container {
-  width: 30%;
-  display: flex;
-  color: white;
-  justify-content: space-around;
-}
-
-.nav-container a {
-  color: white;
-}
-
-
-ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  font-size: 18px;
-  color: white;
-  text-align: right;
-  align-content: center;
-  font-family: 'Raleway';
-  font-weight: 1000;
-  margin-top: 10px;
-}
-
-li a, li a:hover {
-  color: white;
-}
-
-#root > div > nav > div {
-  margin: 0;
-}
-
-#root > div > nav > div > ul {
-  padding: 0;
-  margin: 0.5% 0;
-}
-
-
-
-
-
 
 .picky__placeholder {
   color: red;

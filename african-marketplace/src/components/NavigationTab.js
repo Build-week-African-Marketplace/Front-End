@@ -61,7 +61,7 @@ export default function NavTab(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="green">
+      <AppBar position="static">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -72,7 +72,7 @@ export default function NavTab(props) {
         >
           <Tab label="All" {...a11yProps(0)} />
           {props.uniqueCategorySet.map((category, index) => (
-            <Tab label={category} {...a11yProps(index + 1)} />
+            <Tab label={category} {...a11yProps(index + 1)} key={index+1} />
           ))}
         </Tabs>
       </AppBar>
@@ -82,12 +82,11 @@ export default function NavTab(props) {
         onChangeIndex={handleChangeIndex}
       >
         
-        {/* <div>DJKDJ</div> */}
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <div class="listed-items">
+          <div className="listed-items">
             {props.pricingData.map((product, index) => (
-              <div key={index} className="product">
-                {/* <img src={product.image} alt={product.productName} /> */}
+              <div key={index+1} className="product">
+                <img src={product.image} alt={product.productName} />
                 <h3>{product.productName}</h3>
                 <p>${product.price}</p>
                 <p>{product.subCategory}</p>
@@ -97,13 +96,13 @@ export default function NavTab(props) {
         </TabPanel>
 
         {props.uniqueCategorySet.map((category, index) => (
-          <TabPanel value={value} index={index + 1} dir={theme.direction}>
-            <div class="listed-items">
+          <TabPanel value={value} index={index + 1} dir={theme.direction} key={index+1}>
+            <div className="listed-items">
               {props.pricingData
                 .filter(product => product.subCategory === category)
                 .map((product, index) => (
-                  <div key={index} className="product">
-                    {/* <img src={filteredProduct.image} alt={filteredProduct.productName} /> */}
+                  <div key={index+1} className="product">
+                    <img src={product.image} alt={product.productName} />
                     <h3>{product.productName}</h3>
                     <p>${product.price}</p>
                     <p>{product.subCategory}</p>

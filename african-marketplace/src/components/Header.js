@@ -18,7 +18,7 @@ function Header() {
 
       <div className="nav-container">
         <Link to="/sell">Sell</Link>
-        <a href="#">My Products</a>
+        <Link href="">My Products</Link>
         <Link onClick={logout} to="/">
           Log Out
         </Link>

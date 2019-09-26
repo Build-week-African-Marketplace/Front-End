@@ -12,7 +12,7 @@ const Dashboard = () => {
   const allCategories = [];
   if (pricingData) {
     for (let i = 0; i < pricingData.length; i++) {
-      allCategories.push(Object.values(pricingData[i])[2]);
+      allCategories.push(Object.values(pricingData[i])[3]);
     }
   }
 
