@@ -6,9 +6,6 @@ import { Container, Header, Button, } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 
 const SignupForm = ({ values, errors, touched, isSubmitting, history }) => {
-
-  console.log(history)
-
   return (
     <div className="SignupBlock">
     <Form>
@@ -81,8 +78,6 @@ const SignupForm = ({ values, errors, touched, isSubmitting, history }) => {
   );
 }
 
-
-
 const Signup = withFormik({
   mapPropsToValues({ username, password, email, first_name, last_name }) {
     return {
@@ -102,22 +97,18 @@ const Signup = withFormik({
   }),
 
   handleSubmit(values, { props, setErrors }) {
-    //event.preventDefault();
+    
     if (!values.username) {
       setErrors({ username: "Username is required." });
     } else if (!values.password) {
       setErrors({ password: "Password is required" });
     } else if (values.password && values.password.length < 6) {
       setErrors({ password: "Password must be at least six characters" })
-      //} else if (this.validationSchema.validateAt({ email:  })) {
-      // setErrors({ email: "Please enter a valid email" });
     } else if (!values.first_name) {
       setErrors({ first_name: "First name is required" });
     } else if (!values.last_name) {
       setErrors({ last_name: "Last name is required" })
     } else {
-      console.log("In else clause");
-
       axiosWithAuth()
         .post('/signup', values)
         .then(res => {
@@ -127,9 +118,7 @@ const Signup = withFormik({
         .catch(err => console.log('Oh-oh, something wrong', err));
     }
   },
-
 })(SignupForm);
-
 
 function SignupPageHeader(props) {
   return (
@@ -140,8 +129,5 @@ function SignupPageHeader(props) {
     </Container>
   );
 }
-
-
-
 
 export default SignupPageHeader;
