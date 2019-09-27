@@ -7,10 +7,7 @@ import { ItemContext } from '../context/ItemContext';
 
 function Sell() {
 
-  const [state, setState] = useState({
-    currentStatus: null,
-    currentList: []
-  });;
+  const [state, setState] = useState('');;
 
   return (
     <ItemContext.Provider value={[state, setState]}>

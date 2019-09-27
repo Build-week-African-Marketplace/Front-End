@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import useDarkMode from "../hooks/useDarkMode";
 
@@ -8,6 +8,7 @@ function Header() {
     window.localStorage.removeItem("token");
     window.localStorage.removeItem('userID');
   };
+
 
   const [darkMode, setDarkMode] = useDarkMode();
   console.log("Your mode is dark: ", darkMode)

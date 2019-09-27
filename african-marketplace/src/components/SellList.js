@@ -94,6 +94,7 @@ const SellList = () => {
                     setEdited={setEdited}/>
                 ))}
         </Card.Group>
+        <h2>Global items: {state}</h2>
       </div>
     );
   };
