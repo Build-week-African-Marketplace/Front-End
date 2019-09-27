@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
   
 const LoginForm = ({ values, errors, touched, isSubmitting, history }) => {
-
   return (
     <div className="LoginBlock">
     <Form>
@@ -46,7 +45,6 @@ const LoginForm = ({ values, errors, touched, isSubmitting, history }) => {
   );
 }
 
-
 const Login = withFormik({
   mapPropsToValues({ username, password }) {
     return {
@@ -60,9 +58,6 @@ const Login = withFormik({
     password: Yup.string().required("Password is required"),
 
   }),
-
-
-
   handleSubmit(values, { props, setErrors }) {
     //event.preventDefault();
     if (!values.username) {
@@ -70,8 +65,6 @@ const Login = withFormik({
     } else if (!values.password) {
       setErrors({ password: "Password is required" });
     } else {
-      console.log("In else clause");
-
       axiosWithAuth()
         .post('/login', values)
         .then(res => {
@@ -82,9 +75,7 @@ const Login = withFormik({
         .catch(err => console.log('Oh-oh, something wrong', err));
     }
   },
-
 })(LoginForm);
-
 
 function LoginPageHeader(props) {
   return (
