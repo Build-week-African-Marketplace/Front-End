@@ -1,17 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { axiosWithAuth } from "../utilites/axiosWithAuth";
 import { Card, Button } from 'semantic-ui-react';
 
+import { ItemContext } from '../context/ItemContext';
 import ProductCard from './ProductCard';
 
 const SellList = () => {
   
+    const [state, setState] = useContext(ItemContext);
+
     const [productsList, setProductsList] = useState([]);
     const [update, setUpdate] = useState('');
     const [position, setPosition] = useState(0);
     const [edited, setEdited] = useState('');
     const [editing, setEditing] = useState(false);
  
+    console.log(state)
+
+    useEffect(() => {
+        axiosWithAuth()
+        .get('/products/')
+        .then(res => {
+            setState(res.data.length);
+        })
+        .catch(err => console.log(err));
+      }, []);
+
+
     useEffect(() => {
         console.log(`Position was switched to: ${position}`);
       }, [position]);

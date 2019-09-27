@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Button } from 'semantic-ui-react';
 
 import { axiosWithAuth } from '../utilites/axiosWithAuth';
+import { ItemContext } from '../context/ItemContext';
 
 const CardBtn = (props) =>  {
+
+    const [state, setState] = useContext(ItemContext);
+
+    useEffect(() => {
+        axiosWithAuth()
+        .get('/products/')
+        .then(res => {
+            setState(res.data.length);
+        })
+        .catch(err => console.log(err));
+      }, [Button]);
 
     const deleteProduct = () => {
         axiosWithAuth()
